@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Crime Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="page">
+    <header class="page-header">
+      <h1>Chicago Crime Dashboard</h1>
+      <p class="page-subtitle">Historical trends & model predictions, 2005–2025</p>
+    </header>
+
+    <div class="card">
+      <h2>Crime Predictor</h2>
+      <p class="card-subtitle">
+        Choose conditions to estimate the predicted number of crimes for that hour.
+      </p>
+
+      <form id="predict-form" class="form-grid">
+        <div class="form-field">
+          <label for="dow">Day of Week</label>
+          <select name="dow" id="dow">
+            <option value="1">Sunday</option>
+            <option value="2">Monday</option>
+            <option value="3">Tuesday</option>
+            <option value="4">Wednesday</option>
+            <option value="5">Thursday</option>
+            <option value="6">Friday</option>
+            <option value="7">Saturday</option>
+          </select>
+        </div>
+
+        <div class="form-field">
+          <label for="hour">Hour of Day</label>
+          <input type="number" name="hour" id="hour" min="0" max="23" value="12">
+        </div>
+
+        <div class="form-field">
+          <label for="tmax">Tmax (°F)</label>
+          <input type="number" name="tmax" id="tmax" value="30">
+        </div>
+
+        <div class="form-field">
+          <label for="prcp">Precipitation (mm)</label>
+          <input type="number" name="prcp" id="prcp" value="0">
+        </div>
+
+        <div class="form-field">
+          <label for="snow">Snowfall (mm)</label>
+          <input type="number" name="snow" id="snow" value="0">
+        </div>
+
+        <div class="form-field">
+          <label for="snwd">Snow Depth (mm)</label>
+          <input type="number" name="snwd" id="snwd" value="0">
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn-primary">Predict Crime Count</button>
+        </div>
+      </form>
+
+      <div id="predict-result" class="predict-result">
+        <!-- Result will show up here -->
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header-row">
+        <div>
+          <h2>Crime Risk Over the Day</h2>
+          <p class="card-subtitle">Average crime count by hour of day.</p>
+        </div>
+      </div>
+      <div class="chart-wrapper">
+        <canvas id="crimeByHourChart"></canvas>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header-row">
+        <div>
+          <h2>Crime Model Feature Importance</h2>
+          <p class="card-subtitle">Relative importance of features used in the crime prediction model.</p>
+        </div>
+      </div>
+      <div class="chart-wrapper">
+        <canvas id="featureImportanceChart"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <script src="/main.js"></script>
+</body>
+</html>

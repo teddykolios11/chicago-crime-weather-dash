@@ -1,0 +1,42 @@
+# Data
+data/
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables / secrets
+.env
+.env.*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+
+# Spark / Scala
+target/
+*.class
+*.tasty
+*.jar
+*.gz
+*.zip
+.metals/
+.bloop/
+
+# Hive / HDFS temp
+*.orc
+*.parquet
+
+# Python (if any scripts exist)
+__pycache__/
+*.pyc
+
+# IDEs
+.vscode/
+.idea/
