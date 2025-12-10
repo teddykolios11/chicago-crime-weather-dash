@@ -4,6 +4,8 @@ This project is an end-to-end big data analytics application built around a **La
 
 The system supports batch analytics, machine-learning–driven insights, and low-latency queries surfaced through a web interface.
 
+GH link: https://github.com/teddykolios11/chicago-crime-weather-dash
+
 ---
 
 ## High-Level Architecture
