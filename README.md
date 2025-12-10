@@ -21,6 +21,7 @@ The system supports batch analytics, machine-learning–driven insights, and low
 ---
 
 ## Repository Structure
+```
 ├── hive/
 │   ├── *.hql
 │   └── …
@@ -34,7 +35,7 @@ The system supports batch analytics, machine-learning–driven insights, and low
 │   ├── package.json
 │   └── …
 └── README.md
-
+```
 ---
 
 ## Directory Breakdown
