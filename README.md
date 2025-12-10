@@ -10,9 +10,11 @@ The system supports batch analytics, machine-learning–driven insights, and low
 
 - **Storage Layer**
   - Raw and processed data stored in **HDFS**
+    - Located at /tkolios/data/crimes and /tkolios/data/weather on cluster
   - Analytical tables managed in **Hive**
 - **Batch / ML Layer**
   - **Spark (Scala)** jobs for feature engineering, modeling, and batch processing
+    - Spark ML jar located at /home/hadoop/tkolios/
 - **Serving Layer**
   - Model outputs and aggregates written to **HBase**
 - **Presentation Layer**
